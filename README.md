@@ -1,0 +1,2 @@
+# wechatVoteDemo
+vote demo
