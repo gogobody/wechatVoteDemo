@@ -1,0 +1,17 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="votePane" wx:for="{{ votes }}" wx:for-item="vote" wx:key="votes">
+    <view class="voteBar">投票：{{vote.title}}</view>
+    <view class="voteBox">
+      <view class="status">{{vote.vote_cnt}}人参与投票</view>
+      <view class="deadline">截止时间:    
+      {{vote.deadline}}
+      </view>
+      <view class="share">分享</view>
+    </view>
+  </view>
+  <view class="moreBtn">加载更多</view>
+</view>
+
+<button class=" mainBtn " type="primary" bindtap="govote">发布投票</button>

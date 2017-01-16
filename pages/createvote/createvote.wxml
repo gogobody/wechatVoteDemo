@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="section">
+    <input placeholder="投票题目" type="text" bindinput="changetitle" />
+  </view>
+  <view class="timebody">
+    <label>截止时间 </label>
+    <picker mode="date" value="{{date}}"   bindchange="bindDateChange">
+      <view class="picker">{{date}}   
+      </view>
+    </picker>
+    <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
+      <view class="picker">
+        {{time}}
+      </view>
+    </picker>
+  </view>
+  <button class=" mainBtn " type="primary">发布投票</button>
+</view>

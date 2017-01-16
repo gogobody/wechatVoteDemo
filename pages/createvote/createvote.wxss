@@ -1,0 +1,23 @@
+/* pages/createvote/createvote.wxss */
+.section{
+    background-color: white;
+    padding: 10px;
+    margin-top: 20px;
+    color: #333;
+    text-align: left;
+    font-family: "微软雅黑","黑体",serif;
+    font-size: large;
+}
+.timebody{
+    
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+picker{
+    display: inline-block;
+}
+.picker{
+    padding: 0 20px;
+}
