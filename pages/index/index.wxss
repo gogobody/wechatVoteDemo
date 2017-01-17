@@ -7,16 +7,12 @@ page{
   margin: 10px 20px ;
   
 }
-.mainBtn {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+
 .votePane {
   width: 100%;
   margin-top: 1em;
   display: inline-block;
-  background-color: #f3f3f3;
+  background-color: white;
 }
 
 .voteBar {
@@ -30,7 +26,7 @@ page{
 }
 
 .voteBox {
-  background-color: #f3f3f3;
+  background-color: white;
   position: relative;
   text-align: left;
   padding: 10px 10px 10px 15px;

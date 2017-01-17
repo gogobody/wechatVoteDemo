@@ -19,6 +19,7 @@
 
 page{
   margin: 0;
-  background-color: lightgrey;
+  background-color: #EEEEEE;
+  font-family: "微软雅黑","黑体",serif;
 }
 

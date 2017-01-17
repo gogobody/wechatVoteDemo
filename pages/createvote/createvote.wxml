@@ -4,8 +4,8 @@
   </view>
   <view class="timebody">
     <label>截止时间 </label>
-    <picker mode="date" value="{{date}}"   bindchange="bindDateChange">
-      <view class="picker">{{date}}   
+    <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+      <view class="picker">{{date}}
       </view>
     </picker>
     <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
@@ -13,6 +13,18 @@
         {{time}}
       </view>
     </picker>
+  </view>
+  <view class="options">
+    <view wx:for="{{options}}" wx:for-item="option">
+      <view class="option">
+        <view class="index">{{ index+1}}﹑{{option}}</view>
+        <label class="deloption" data-index="{{index}}" bindtap="delopt">X</label>
+      </view>
+    </view>
+    <view class="optionaddregion">
+      <input type="text" id="addoptioninput" placeholder="新选项内容" value="{{newOption}}" bindchange="newoption" />
+    </view>
+    <button id="addoptionbtn" bindtap="addoption">添加</button>
   </view>
   <button class=" mainBtn " type="primary">发布投票</button>
 </view>
