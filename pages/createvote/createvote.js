@@ -1,6 +1,6 @@
 // pages/createvote/createvote.js
 var utils = require("../../utils/util");
-var app=getApp(); 
+var app = getApp();
 
 Page({
   data: {
@@ -41,8 +41,36 @@ Page({
     this.setData({ options: opts })
   },
   pushVote: function (e) {
-    console.log("sssssssss");
-    
+    wx.request({
+      url: 'https://python.freelycode.com/onlinevote/api/v1/vote/create/',
+      data: {
+        "user_token": app.globalData.userInfo,
+        "title": this.data.title,
+        "option": this.data.options,
+        "deadline": this.data.date + " " + this.data.time + ":00"
+      },
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: function (res) {
+        if (res.data.status == "ok") {
+          wx.navigateBack({
+            delta: 1, // 回退前 delta(默认为1) 页面
+          })
+        }else{
+          wx.showModal({
+          title: "错误",
+          content: res.data.msg
+        })
+        }
+      },
+      fail: function (res) {
+        wx.showModal({
+          title: "错误",
+          content: res.data.msg
+        })
+      }
+    })
+
   }
 
 })

@@ -1,0 +1,41 @@
+.header {
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.status {
+  padding: 10px 0;
+}
+
+.deadline {
+  margin-bottom: 10px;
+}
+
+radio {
+  /*position: relative;*/
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.votecontent {
+  padding: 5px;
+  background-color: white;
+  /*width: 100%;*/
+  word-wrap: break-word;
+  word-break: break-all;
+  right: 10px;
+  width: 250px;
+  max-width: 250px;
+}
+.wx-radio-input{
+  width: 10px;
+}
+
+.container {
+  margin: 10px;
+}
+
+.confirm {
+  bottom: 0;
+}

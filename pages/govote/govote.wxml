@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="header">{{title}}</view>
+  <view class="status">状态 : {{status}} </view>
+  <view class="deadline">截止时间 : {{deadline}}</view>
+  <radio-group class="radio-group" bindchange="radiochange">
+    <label wx:for="{{options}}" wx:for-item="opt" class="radio">
+      <radio value="{{opt.id}}">
+        <view class="votecontent">
+          {{opt.content}}
+        </view>
+      </radio>
+    </label>
+  </radio-group>
+</view>
+  <button type="primary" class="mainBtn" bindtap="submit">确认投票</button>

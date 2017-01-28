@@ -1,13 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/createvote/createvote"
+    "pages/createvote/createvote",
+    "pages/govote/govote",
+    "pages/votedetail/votedetail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#001",
     "navigationBarTitleText": "demo",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   }
 }

@@ -1,17 +1,20 @@
 
 <!--index.wxml-->
 <view class="container">
-  <view class="votePane" wx:for="{{ votes }}" wx:for-item="vote" wx:key="votes">
-    <view class="voteBar">投票：{{vote.title}}</view>
-    <view class="voteBox">
-      <view class="status">{{vote.vote_cnt}}人参与投票</view>
-      <view class="deadline">截止时间:    
-      {{vote.deadline}}
+  <view class="weui-panel" wx:for="{{ votes }}" wx:for-item="vote" wx:key="votes" data-id="{{vote.id}}" bindtap="godetail">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">{{vote.title}}</view>
+        <view class="weui-media-box__desc">{{vote.vote_cnt}}人参与投票</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        <view class="weui-media-box__info">
+          <view class="weui-media-box__info__meta">截止时间:<text>{{text}}</text> <text>{{text}}</text> 
+ {{vote.deadline}} </view>
+          <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="govote">投票</button>
+        </view>
       </view>
-      <view class="share">分享</view>
     </view>
   </view>
-  <view class="moreBtn">加载更多</view>
+ 
 </view>
-
-<button class=" mainBtn " type="primary" bindtap="govote">发布投票</button>
+<button class=" mainBtn " type="primary" bindtap="createvote">发布投票</button>

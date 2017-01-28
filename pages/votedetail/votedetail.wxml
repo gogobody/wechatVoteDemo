@@ -1,0 +1,18 @@
+
+<view class="container page">
+<view class="page__hd">
+  <view class="page__title">{{title}}</view>
+  </view>
+  <view class="weui-article__title">状态 : {{status}} </view>
+  <view  class="weui-article__title">截止时间 : {{deadline}}</view>
+ <view class=" weui-cells weui-cells_after-title">
+  <view class="weui-cell" wx:for="{{options}}" wx:for-item="opt">
+
+    <view class="weui-cell__bd">{{index+1}} ﹑{{opt.name}}</view>
+    <view class="weui-cell__ft">{{opt.count}}</view>
+
+
+  </view>
+  </view>
+  <view class="ret" bindtap="ret">返回主页</view>
+</view>

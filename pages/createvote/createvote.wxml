@@ -26,5 +26,5 @@
     </view>
     <button id="addoptionbtn" bindtap="addoption">添加</button>
   </view>
-  <button class=" mainBtn " type="primary">发布投票</button>
+  <button class=" mainBtn " type="primary" bindtap="pushVote">发布投票</button>
 </view>
